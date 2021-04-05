@@ -1,0 +1,30 @@
+Package: lesson.template
+Title: Github Repo Template for a Pkgdown Lesson
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Hao",
+           family = "Ye",
+           role = c("aut", "cre"),
+           email = "haoye@ufl.edu",
+           comment = c(ORCID = "0000-0002-8630-1458"))
+Description: This github repository serves as a template for a short-form workshop, lesson, or course to be shared in the form of a pkgdown website with slides rendered by xaringan. This description text for the package and lesson should be written in `README.Rmd`, which, when knit, will then update the package's `DESCRIPTION` file.
+License: CC BY 4.0
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+Imports:
+    desc,
+    jsonlite,
+    knitr (>= 1.31),
+    showtext,
+    xaringan,
+    xaringanthemer,
+    usethis
+title: Github Repo Template for a Pkgdown Lesson
+learningOutcomes: * something
+ * something else
+ * thing 3
+prerequisites: * how to fold cheese
+ * how to fold cheesecloth
+priorCourse: 
