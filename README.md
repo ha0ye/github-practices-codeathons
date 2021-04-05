@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Github Repo Template for a Pkgdown Lesson
+# Best Practices for Using Github to do Data Science
 
 <!-- badges: start -->
 
@@ -12,25 +12,24 @@ workflow](https://github.com/uf-repro/lesson-template/workflows/pkgdown/badge.sv
 
 ## Description
 
-This github repository serves as a template for a short-form workshop,
-lesson, or course to be shared in the form of a pkgdown website with
-slides rendered by xaringan. This description text for the package and
-lesson should be written in `README.Rmd`, which, when knit, will then
-update the package’s `DESCRIPTION` file.
+Data science does not stop once you have completed an analysis and
+produced a publication or poster. Share your work in a FAIR (findable,
+accessible, interoperable, reusable) manner is crucial for researchers
+who wish to have an impact. This lesson reviews the essential concepts
+of Git and Github, the de facto tools for version control, and their
+benefits for data science projects.
 
-## Prerequisites
-
-This lesson assumes you:
-
-  - how to fold cheese
-  - how to fold cheesecloth
-
-Such as via
+NO previous experience with git is required.
 
 ## Learning Outcomes
 
 By the end of the workshop, participants will be able to:
 
-  - something
-  - something else
-  - thing 3
+  - explain the benefits of version control for coding projects
+  - understand essential features of working in git and github
+      - commits as project snapshots
+      - branches as ways to experiment
+      - merging and resolving merge conflicts
+      - remotes and clones
+      - collaboration workflow
+  - identify resources for further learning

@@ -15,12 +15,17 @@ knitr::opts_chunk$set(
 
 ```{r, include = FALSE}
 
-lesson_title <- "Github Repo Template for a Pkgdown Lesson"
-lesson_description <- "This github repository serves as a template for a short-form workshop, lesson, or course to be shared in the form of a pkgdown website with slides rendered by xaringan. This description text for the package and lesson should be written in `README.Rmd`, which, when knit, will then update the package's `DESCRIPTION` file."
+lesson_title <- "Best Practices for Using Github to do Data Science"
+lesson_description <- "Data science does not stop once you have completed an analysis and produced a publication or poster. Share your work in a FAIR (findable, accessible, interoperable, reusable) manner is crucial for researchers who wish to have an impact. This lesson reviews the essential concepts of Git and Github, the de facto tools for version control, and their benefits for data science projects.
+
+NO previous experience with git is required."
 lesson_keywords <- c("Open Educational Resources", 
                      "Research Support Skills", 
                      "Version Control", 
-                     "Workshop")
+                     "Workshop", 
+                     "Git", 
+                     "Github", 
+                     "Data Science")
 folder_name <- basename(usethis::proj_get())
 package_name <- gsub("-", ".", folder_name)
 
@@ -48,29 +53,17 @@ jsonlite::write_json(zenodo_json, ".zenodo.json",
 
 `r lesson_description`
 
-## Prerequisites
-```{r, include = FALSE}
-prereqs <- c("how to fold cheese", 
-             "how to fold cheesecloth")
-prereqs_text <- paste0("* ", prereqs, collapse = "\n")
-desc::desc_set("prerequisites", prereqs_text)
-
-prior_course <- ""
-desc::desc_set("priorCourse", prior_course)
-```
-
-This lesson assumes you:
-
-`r prereqs_text`
-
-Such as via `r prior_course`
-
 ## Learning Outcomes
 
 ```{r, include = FALSE}
-learning_outcomes <- c("something", 
-                       "something else",
-                       "thing 3")
+learning_outcomes <- c("explain the benefits of version control for coding projects",
+                       "understand essential features of working in git and github
+  - commits as project snapshots
+  - branches as ways to experiment
+  - merging and resolving merge conflicts
+  - remotes and clones
+  - collaboration workflow", 
+  "identify resources for further learning")
 outcomes_text <- paste0("* ", learning_outcomes, collapse = "\n")
 desc::desc_set("learningOutcomes", outcomes_text)
 ```

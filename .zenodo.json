@@ -1,5 +1,5 @@
 {
-  "title": "Github Repo Template for a Pkgdown Lesson",
+  "title": "Best Practices for Using Github to do Data Science",
   "creators": [
     {
       "affiliation": "University of Florida",
@@ -7,12 +7,15 @@
       "orcid": "0000-0002-8630-1458"
     }
   ],
-  "description": "This github repository serves as a template for a short-form workshop, lesson, or course to be shared in the form of a pkgdown website with slides rendered by xaringan. This description text for the package and lesson should be written in `README.Rmd`, which, when knit, will then update the package's `DESCRIPTION` file.",
+  "description": "Data science does not stop once you have completed an analysis and produced a publication or poster. Share your work in a FAIR (findable, accessible, interoperable, reusable) manner is crucial for researchers who wish to have an impact. This lesson reviews the essential concepts of Git and Github, the de facto tools for version control, and their benefits for data science projects.\n\nNO previous experience with git is required.",
   "keywords": [
     "Open Educational Resources",
     "Research Support Skills",
     "Version Control",
-    "Workshop"
+    "Workshop",
+    "Git",
+    "Github",
+    "Data Science"
   ],
   "access_right": "open",
   "license": "CC-BY-4.0",
