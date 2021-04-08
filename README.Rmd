@@ -53,6 +53,19 @@ jsonlite::write_json(zenodo_json, ".zenodo.json",
 
 `r lesson_description`
 
+## Prerequisites
+```{r, include = FALSE}
+prereqs <- c("are proficient in programming and data analysis")
+prereqs_text <- paste0("* ", prereqs, collapse = "\n")
+desc::desc_set("prerequisites", prereqs_text)
+
+```
+
+This lesson assumes you:
+
+`r prereqs_text`
+
+
 ## Learning Outcomes
 
 ```{r, include = FALSE}

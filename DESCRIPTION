@@ -1,6 +1,6 @@
-Package: intro.github.practices
+Package: github.practices.BME6938
 Title: Best Practices for Using Github to do Data Science
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person(given = "Hao",
            family = "Ye",
@@ -9,7 +9,7 @@ Authors@R:
            comment = c(ORCID = "0000-0002-8630-1458"))
 Description: Data science does not stop once you have completed an analysis and produced a publication or poster. Share your work in a FAIR (findable, accessible, interoperable, reusable) manner is crucial for researchers who wish to have an impact. This lesson reviews the essential concepts of Git and Github, the de facto tools for version control, and their benefits for data science projects.
  .
-  NO previous experience with git is required.
+   NO previous experience with git is required.
 License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
@@ -23,7 +23,6 @@ Imports:
     xaringan,
     xaringanthemer,
     usethis
-title: Github Repo Template for a Pkgdown Lesson
 learningOutcomes: * explain the benefits of version control for coding projects
  * understand essential features of working in git and github
   - commits as project snapshots
@@ -32,6 +31,5 @@ learningOutcomes: * explain the benefits of version control for coding projects
   - remotes and clones
   - collaboration workflow
  * identify resources for further learning
-prerequisites: * how to fold cheese
- * how to fold cheesecloth
+prerequisites: * are proficient in programming and data analysis
 priorCourse: 

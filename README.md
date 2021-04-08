@@ -21,6 +21,12 @@ benefits for data science projects.
 
 NO previous experience with git is required.
 
+## Prerequisites
+
+This lesson assumes you:
+
+  - are proficient in programming and data analysis
+
 ## Learning Outcomes
 
 By the end of the workshop, participants will be able to:
