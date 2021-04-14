@@ -1,13 +1,14 @@
 ---
 title: "`r desc::desc_get('Title', '..')`"
 author: "Hao Ye"
-institute: "Health Science Center Libraries, University of Florida"
+institute: "Health Science Center Libraries"
 date: "(updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
     css: xaringan-themer.css
     seal: false
+    fig_caption: false
     nature:
       highlightStyle: github
       highlightLines: true
@@ -19,8 +20,7 @@ options(htmltools.dir.version = FALSE)
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
-style_mono_accent(
-  base_color = "#09274B",
+style_solarized_light(
   base_font_size = "32px", 
   header_h1_font_size = "2.0rem",
   header_h2_font_size = "1.5rem",
@@ -38,7 +38,7 @@ style_mono_accent(
                    "pre" = list("margin-top" = "0.5em", 
                               "margin-bottom" = "0.5em"), 
                    ".small" = list("font-size" = "80%"), 
-                   ".tiny" = list("font-size" = "50%")), 
+                   ".tiny" = list("font-size" = "50%")),  
   link_color = "#339944"
 )
 ```
@@ -50,51 +50,200 @@ class: inverse, center, middle
 ### (updated: `r Sys.Date()`)
 
 ---
-# Motivations
+You have a published data analysis.
 
-* because
+--
+
+### .center[🎉 Congrats! 🎉]
+
+--
+
+What happens next?
+
+--
+
+* Can **I** apply the code to **new** data?
+* Can **I** apply **my method** to your data?
+* **Where** do you store older versions / figures that didn't make it into the paper?
+* How does someone contribute to the project?
 
 ---
-# Prerequisites
+# Preliminaties
 
 This lesson assumes you:
 `r gsub("\n ", "\n", desc::desc_get("prerequisites"))`
 
-Such as via `r desc::desc_get("priorCourse")`
+--
+
+**NO** previous experience with Git or GitHub is required!
 
 ---
-# Learning Outcomes
+# Learning Objectives
 
-By the end of the workshop, participants will be able to:
+1 hour is insufficient to teach you how to use Git and GitHub in a data analysis workflow.
+
+--
+
+1 hour **is** sufficient to explain why Git and GitHub are useful in a data analysis workflow.
+
+---
+This lesson teaches you to:
 
 `r gsub("\n ", "\n", desc::desc_get("learningOutcomes"))`
 
 ---
+
 class: inverse, center, middle
 
-# Subheading
+# Basic Concepts
 
 ---
-# Topic
 
-Description
+# Version Control
+
+**Version Control**: tools/systems to manage changes to files
 
 --
-## So what?
+## You are probably already using version control!
 
-* reason!
-* another reason!
+* MS Word has "track changes"
+* Dropbox / Google Drive can revert versions
 
 ---
 
-```{r, echo = FALSE, out.width = "70%", fig.cap = "Falafel!", fig.alt = "Alt Text: A tan and white dog (retriever mix) is lying on a tile floor and looking up at the camera with his mouse open, seemingly happy. There is a food container on his body with the label 'Tzatziki' visible. (This is a visual pun on the dog's name, Falafel)"}
-knitr::include_graphics("image.jpg")
-```
+# Why Learn Git & GitHub
+
+Git & GitHub are version control for **projects**.
+
+You can:
+* restore project states involving changes to multiple files.
+* track *who* made *what* changes and *why*
+* handle changes in any file format
+* manage work from large distributed teams
+
+---
+
+# Example scenarios
+
+* You change a histogram to a bar plot, and then you want to change it back.
+* Your collaborator makes edits while traveling, and you need to combine their changes with changes you made in the meantime.
+* You want to experiment with a different dataset / analysis / narrative without duplicating everything.
+
+---
+
+# Git and GitHub
+
+--
+
+## (not the same thing!)
+
+---
+
+# Git
+
+* software and version control system
+* notoriously unfriendly
+  - unintuitive command names
+  - obscure error messages
+
+---
+
+# GitHub
+
+* a cloud platform that hosts Git repos
+* unlimited *public* and *private* repos
+* size limits:
+  - 1 GB for each repo
+  - 100 MB for individual files
+* [GitHub Education](https://education.github.com/pack) has some benefits
+  - one code for a free t-shirt from https://github.myshopify.com/ to be given away to a random attendee
+  
+---
+
+class: inverse, center, middle
+
+# Git enables time travel
+
+---
+
+---
+
+---
+
+---
+
+class: inverse, center, middle
+
+# Commits Are Project States
+
+---
+
+# Structure of a Commit
+
+
+---
+
+---
+
+---
+
+class: inverse, center, middle
+
+# Branches Let You Experiment
+
+---
+
+# 
+
+
+---
+
+---
+
+# The GitHub Flow System
+
+
+
+---
+class: inverse, center, middle
+
+# GitHub as a Backup System
+
+---
+
+# 
+
+
+---
+
+---
+
+---
+
+class: inverse, center, middle
+
+# GitHub as a Collaboration Platform
+
+---
+
+# 
+
+
+---
+
+---
+
+---
 
 ---
 # Thanks
 
-* Let me know what content you'd like to see
-* Contact me for additional questions or consultation requests!
-* Check back in on the libguide for more modules and contact info:
-  - https://guides.uflib.ufl.edu/reproducibility
+* Check out the [Getting Started checklist](https://ha0ye.github.io/github-practices-BME6938/checklist.html) for actions to get started.
+* Check out the [Resources](https://ha0ye.github.io/github-practices-BME6938/resources.html) page for tutorials and guides
+* Contact me if you have questions or would like a (free) consultation on reproducibility / sharing of your data science project.
+* https://guides.uflib.ufl.edu/reproducibility has more info and my contact info
+
+
+
+
+
