@@ -21,38 +21,38 @@
 ## Workflow (starting with a new or existing local project)
 
 - [ ] Initialize a git repo in the project folder:
-```bash
-git init
-```
+  ```bash
+  git init
+  ```
 - [ ] [Add commits](https://rogerdudler.github.io/git-guide#add)
 - [ ] [Create a GitHub repo](https://github.com/new) without any initialized files.
 - [ ] Connect your local git repo to GitHub
-```bash
-git remote add origin <server>
-```
+  ```bash
+  git remote add origin <server>
+  ```
 - [ ] [Push local commits to GitHub](https://rogerdudler.github.io/git-guide/#push)
 
 ## Workflow (starting with a new GitHub project)
 
 - [ ] [Create a GitHub repo](https://github.com/new) without any initialized files.
 - [ ] Clone the empty project to your computer
-```bash
-git clone <server>
-```
+  ```bash
+  git clone <server>
+  ```
 - [ ] [Add commits](https://rogerdudler.github.io/git-guide#add)
 - [ ] [Push local commits to GitHub](https://rogerdudler.github.io/git-guide/#push)
 
 ## Workflow (GitHub Flow)
 
 - [ ] Create a local branch
-```bash
-git checkout -b <branch>
-```
+  ```bash
+  git checkout -b <branch>
+  ```
 - [ ] [Add commits](https://rogerdudler.github.io/git-guide#add)
 - [ ] Push to GitHub
-```bash
-git push origin <branch>
-```
+  ```bash
+  git push origin <branch>
+  ```
 - [ ] Create a pull request on GitHub
 - [ ] Approve the pull request to merge the new branch
 

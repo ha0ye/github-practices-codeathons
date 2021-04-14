@@ -334,8 +334,6 @@ Two people, A and B, are working together:
 * after merging, unneeded branches can be deleted
 
 ---
-
----
 # Takeaway Messages
 
 * **commits** are project states
@@ -349,8 +347,3 @@ Two people, A and B, are working together:
 * Check out the [Resources](https://ha0ye.github.io/github-practices-BME6938/resources.html) page for tutorials and guides
 * Contact me if you have questions or would like a (free) consultation on reproducibility / sharing of your data science project.
 * https://guides.uflib.ufl.edu/reproducibility has more info and my contact info
-
-
-
-
-
