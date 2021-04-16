@@ -260,6 +260,13 @@ A `merge` combines changes from separate branches together into a new commit.
 * Otherwise, a **merge conflict** occurs, and you need to manually reconcile the differences for the merge commit.
 
 ---
+# Example Merge Conflict
+
+```{r, echo = FALSE, fig.alt = "A screenshot of BBedit showing the merge conflict. Line 6 is '<<<<<<< HEAD'`' indicating the start of one version of the file. Line 8 is '=======' indicating the end of one version and the beginning of the next. Line 10 shows '>>>>>>>' followed by a hash, indicating the end of the second version."}
+knitr::include_graphics("merge-conflict.png")
+```
+
+---
 class: inverse, center, middle
 
 # GitHub as a Backup System
@@ -307,7 +314,17 @@ class: inverse, center, middle
 # GitHub as a Collaboration Platform
 
 ---
+# Visibility
 
+**Public** repos are visible to everyone.
+
+**Private** repos are visible only to collaborators.
+
+--
+
+You can toggle a repo between **public** and **private** as needed.
+
+---
 # Sharing Repos
 
 On GitHub, you can add other accounts as collaborators to give them write access.
@@ -338,7 +355,7 @@ Two people, A and B, are working together:
 
 * **commits** are project states
 * **branches** are alternate timelines
-* **GitHub** is a cloud platform for backups and collaborating
+* **GitHub** is a cloud platform for backups and collaboration
 
 ---
 # Thanks

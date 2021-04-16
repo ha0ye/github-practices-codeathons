@@ -1,6 +1,6 @@
 Package: github.practices.BME6938
 Title: Best Practices for Using Github to do Data Science
-Version: 0.9.0
+Version: 1.0.0
 Authors@R: 
     person(given = "Hao",
            family = "Ye",
