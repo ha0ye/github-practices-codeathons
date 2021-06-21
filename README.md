@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Best Practices for Using Github to do Data Science
+# Using Github for Collaborative Codeathons
 
 <!-- badges: start -->
 
@@ -12,30 +12,26 @@ workflow](https://github.com/uf-repro/lesson-template/workflows/pkgdown/badge.sv
 
 ## Description
 
-Data science does not stop once you have completed an analysis and
-produced a publication or poster. Share your work in a FAIR (findable,
-accessible, interoperable, reusable) manner is crucial for researchers
-who wish to have an impact. This lesson reviews the essential concepts
-of Git and Github, the de facto tools for version control, and their
-benefits for data science projects.
+GitHub is not just a cloud server for Git, but an effective platform for
+collaboration. This lesson is a 0 to 60 introduction to using Git and
+GitHub for collaborative projects. It starts with the essential concepts
+in Git and Github, how merge conflicts arise and how to resolve them,
+and the GitHub Flow workflow practice.
 
-NO previous experience with git is required.
-
-## Prerequisites
-
-This lesson assumes you:
-
-  - are proficient in programming and data analysis
+*This lesson is open to everyone; NO previous experience with
+programming/git/command-line is required.*
 
 ## Learning Outcomes
 
 By the end of the workshop, participants will be able to:
 
-  - explain the benefits of version control for coding projects
-  - understand essential features of working in git and github
-      - commits as project snapshots
-      - branches as ways to experiment
-      - merging and resolving merge conflicts
-      - remotes and clones
-      - collaboration workflow
-  - identify resources for further learning
+-   explain the benefits of version control
+-   articulate the differences between `git` and `Github`
+-   understand essential features of working in git and github
+    -   commits as project snapshots
+    -   branches as ways to experiment
+    -   remotes and clones
+    -   collaboration workflow
+-   create and navigate branches on GitHub and using GitHub Desktop
+-   create and merge pull requests
+-   use the “Github Flow” system
