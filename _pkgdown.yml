@@ -1,6 +1,6 @@
 template:
   params:
-    bootswatch: darkly
+    bootswatch: flatly
   assets:
     slides
 
