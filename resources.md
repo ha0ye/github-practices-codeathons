@@ -1,5 +1,10 @@
 # Additional Resources / Readings
 
+## Downloads
+
+* [Git software](https://git-scm.com/downloads)
+* [GitHub Desktop](https://desktop.github.com/)
+
 ## Conceptual
 
 * ["Git for humans"](https://speakerdeck.com/alicebartlett/git-for-humans)

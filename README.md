@@ -25,13 +25,12 @@ programming/git/command-line is required.*
 
 By the end of the workshop, participants will be able to:
 
--   explain the benefits of version control
 -   articulate the differences between `git` and `Github`
 -   understand essential features of working in git and github
     -   commits as project snapshots
     -   branches as ways to experiment
     -   remotes and clones
     -   collaboration workflow
--   create and navigate branches on GitHub and using GitHub Desktop
+-   create and navigate branches
 -   create and merge pull requests
 -   use the “Github Flow” system

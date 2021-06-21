@@ -15,7 +15,6 @@ navbar:
      right:
       - notes
       - slides
-      - checklist
       - resources
       - home
       - github
@@ -33,9 +32,6 @@ navbar:
      slides:
        text: Slides
        href: slides.html
-     checklist:
-       text: Getting Started
-       href: checklist.html
      resources:
        text: Resources
        href: resources.html
