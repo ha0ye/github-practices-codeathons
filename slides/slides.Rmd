@@ -1,7 +1,6 @@
 ---
 title: "`r desc::desc_get('Title', '..')`"
 author: "Hao Ye"
-institute: "Health Science Center Libraries"
 date: "(updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
@@ -46,45 +45,32 @@ class: inverse, center, middle
 
 # `r desc::desc_get('Title', '..')`
 ### `r rmarkdown::metadata$author`
-### `r rmarkdown::metadata$institute`
+### Reproducibility Librarian, University of Florida
 ### (updated: `r Sys.Date()`)
 
 ---
-You have a published data analysis.
+🚀 You've got a team and a project idea and are ready to GO! 🚀
 
 --
 
-### .center[🎉 Congrats! 🎉]
+How do you effectively work together??
 
 --
 
-What happens next?
-
---
-
-* Can **I** apply the code to **new** data?
-* Can **I** apply **my method** to your data?
-* **Where** do you store older versions / figures that didn't make it into the paper?
-* How does someone contribute to the project?
+* Can you edit someone else's changes?
+* Can multiple people update the codebase at the same time?
+* How do you save everyone's work, just in case?
+* How do external folks contribute to the project?
 
 ---
-# Preliminaties
+# What is in this talk?
 
-This lesson assumes you:
-`r gsub("\n ", "\n", desc::desc_get("prerequisites"))`
+1 hour is only enough time to go over basic concepts and workflow practices.
+  - enough to get started (even if you haven't used git or github before)
 
---
+We will conclude with a quick hands-on exercise using the GitHub website.
 
-**NO** previous experience with Git or GitHub is required!
-
----
-# Learning Objectives
-
-1 hour is insufficient to teach you how to use Git and GitHub in a data analysis workflow.
-
---
-
-1 hour **is** sufficient to explain why Git and GitHub are useful in a data analysis workflow.
+(If teams do not yet have a shared repo that every team member has access to, **please speak up now**!)
 
 ---
 This lesson teaches you to:
@@ -123,14 +109,6 @@ You can:
 
 ---
 
-# Example scenarios
-
-* You change a histogram to a bar plot, and then you want to change it back.
-* Your collaborator makes edits while traveling, and you need to combine their changes with changes you made in the meantime.
-* You want to experiment with a different dataset / analysis / narrative without duplicating everything.
-
----
-
 # Git and GitHub
 
 --
@@ -142,9 +120,12 @@ You can:
 # Git
 
 * **Git** is the name of the software and the associated version control system
-* notoriously unfriendly
-  - unintuitive command names
-  - obscure error messages
+* default interface is the command line
+  - commands have unintuitive names
+  - error messages can be obscure
+* many other tools improve on the exoerience
+  - graphical interface
+  - integration with other things, including GitHub
 
 ---
 
@@ -155,8 +136,8 @@ You can:
 * size limits:
   - 1 GB for each repo
   - 100 MB for individual files
-* [GitHub Education](https://education.github.com/pack) has some benefits
-  - one code for a free t-shirt from https://github.myshopify.com/ to be given away to a random attendee
+* GitHub Actions provide continuous integration
+  - great for testing or deploying 
   
 ---
 
@@ -182,7 +163,7 @@ knitr::include_graphics("commits_example.png")
 # Commit Structure
 
 * each commit has a **commit message**
-  - 1-line summary
+  - 1-line summary (required)
   - blank line
   - further details
 * each commit also records **who** and **when**
@@ -200,23 +181,56 @@ knitr::include_graphics("commits_example.png")
 
 * each commit is created *manually*
   - `add` files with changes (including new files)
-  - `commit` and write the commit message
+  - run `commit` command  
+    write the commit message
 
 --
 * Why so tedious?
-  - this procedure gives you control over which changes are recorded in each commit
+  - You have full control over the changes that are recorded in each commit
 
 ---
 
 # Navigating Commits
 
 * Git generates a unique **hash** for each commit
-* You can view the project state by using the `checkout` command and the desired hash
+* You can retrieve a commit by using the `checkout` command and the desired hash
 * The file/folder contents will change to reflect the project state for that commit.
 
 --
 
-*In Git, files and folders are mutable; nothing is safe unless it is in a **commit**.*
+*In Git, files and folders are temporary; nothing is saved and safe unless it is in a **commit**.*
+
+---
+class: inverse, center, middle
+
+# GitHub as a Backup System
+
+---
+
+file backup = store a copy somewhere else
+
+**How do you backup a Git repository?**
+
+--
+
+Git stores all of the information about commits, history, etc. the `.git` folder of your project
+* `.git` is normally hidden
+
+* You can copy over the project folder, and it will contain the full git history. (e.g. You can store it in Dropbox.)
+
+* You can also specify other locations to synchronize a git repository to.  
+  These are called **remotes**.
+  
+---
+# GitHub
+
+GitHub acts as a **remote** in the cloud.
+
+To use:
+1. Create an empty GitHub repo to be your remote location
+2. Synchronize this GitHub repo to your computer
+3. `push` will send all new commits on the current branch to GitHub
+4. `pull` will retrieve new commits from GitHub
 
 ---
 
@@ -226,11 +240,12 @@ class: inverse, center, middle
 
 ---
 
-For simple projects, your commits might proceed in a linear fashion:
-  - each commit is an incremental step forward
-    (commits track only changes from the previous commit)
+# About Branches
 
-But you might be working on different aspects of your project at the same time!
+For simple projects, your commits may proceed in a linear fashion:
+  - each commit is a step forward
+
+But you might want to work on different aspects of your project at the same time!
 
 --
 
@@ -249,9 +264,33 @@ knitr::include_graphics("git-branch.svg")
 
 ---
 
+# Creating new branches (GitHub)
+
+```{r, echo = FALSE, fig.alt = "screenshot of the GitHub interface, when clicking on the pulldown menu to switch branches; this interface also enables one to create new branches."}
+knitr::include_graphics("github-new-branch.png")
+```
+
+---
+
+# Tips for Creating Branches
+
+* choose names that won't overlap with anyone else's:  
+  "&lt;name&gt;-&lt;feature&gt;" is a common strategy  
+  e.g. "hao-update-readme"
+
+* double check which branch you are in before making a commit!
+
+---
+
+class: inverse, center, middle
+
+# A Merge/Pull Request Combines Work from Separate Branches
+
+---
+
 # Merges
 
-A `merge` combines changes from separate branches together into a new commit.
+A **merge** combines changes from separate branches together into a new commit.
 
 --
 
@@ -267,62 +306,30 @@ knitr::include_graphics("merge-conflict.png")
 ```
 
 ---
-class: inverse, center, middle
+# Pull Requests
 
-# GitHub as a Backup System
-
----
-
-Making a file backup = storing a copy in another location
-
-**How do you backup a Git repository?**
+On Github, merges start by creating a **pull request**.
 
 --
 
-Git stores all of the information about the commit history, etc. inside a hidden folder called `.git` within the project folder.
+Pull requests are a way for a maintainer or a team to review and comment on merges *before they happen*.
 
-* You can copy over the project folder, and it will contain the full git history. (e.g. You can store it in Dropbox.)
-
-* You can also specify other locations to synchronize a git repository to.  
-  These are called **remotes**.
-
----
-# GitHub
-
-GitHub acts as a cloud platform to store remotes.
-
-Workflow:
-1. Create an empty GitHub repository to be the remote location for a project
-2. Add the address for the new, empty repo on GitHub as a remote, usually called "origin".
-3. `push` will send all new commits on the current branch to the default remote ("origin")
-4. `pull` will retrieve new commits from the remote.
+```{r, echo = FALSE, fig.alt = "The GitHub interface for creating a new Pull Request. The important elements are selecting the 'Pull Requests' tab and the green button for 'New pull request'."}
+knitr::include_graphics("new-pull-request.png")
+```
 
 ---
-# Restoring from GitHub
+# Creating a Pull Request
 
-1. From a GitHub repository, obtain the address.
-2. `clone` will create a local copy of the repository, and automatically include its source as the remote named "origin".
-
---
-
-In a public GitHub repo, anyone can obtain the files along with the whole history of the project in its commits.
+```{r, echo = FALSE, fig.alt = "The GitHub interface for creating a Pull Request. The important elements are the selection of the 'base' branch that will take the merge, the 'compare:' branch that has the new commits to be merged, the title of the pull request (with the text 'Update index.md'), the text box (which is empty), and the green button for 'Create pull request'."}
+knitr::include_graphics("pull-request.png")
+```
 
 ---
 
 class: inverse, center, middle
 
-# GitHub as a Collaboration Platform
-
----
-# Visibility
-
-**Public** repos are visible to everyone.
-
-**Private** repos are visible only to collaborators.
-
---
-
-You can toggle a repo between **public** and **private** as needed.
+# Collaborating on GitHub
 
 ---
 # Sharing Repos
@@ -331,36 +338,52 @@ On GitHub, you can add other accounts as collaborators to give them write access
 
 --
 
-## Example scenario
+If you try to work in the same branch, you have to wait for the other person to finish making changes before you can make changes!
 
-Two people, A and B, are working together:
-* A `commits`, A `pushes` to GitHub.
-* B `pulls` the changes, creates new `commits`, and `pushes` to GitHub.
-* A must `pull` the changes from GitHub.
+--
+
+We don't have time for this!
 
 ---
 
-# The GitHub Flow System
+# GitHub Flow for Collaborations
 
-**Github Flow** is a system for easier collaborations using a shared GitHub repo:
-
-* a primary branch, e.g. "main", stores the current, working versions of the project
-* work is carried out in branches
-* when work is ready to be merged into "main", a **pull request** is created on GitHub
-  - this allows discussion and review
+* a primary branch, e.g. "main", stores the working version of the project
+* updates happen in branches
+* when work is ready to be merged into "main", create a **pull request**
 * after merging, unneeded branches can be deleted
+
+---
+
+# Benefits
+
+* multiple lines of work can happen at the same time, in **different branches**
+* subteams can work together on shared branches
+  - pull request from separate branches to a shared group branch
+  - discussions can happen in the pull request
+
+---
+
+# Exercise
+
+We will now test out the **GitHub Flow** system on your project repos:
+
+1. create a new branch  
+  (named "&lt;your name&gt;-readme")
+2. in GitHub, add your name to the Team section of the README file, and commit the changes
+3. create a pull request to the **main** branch
 
 ---
 # Takeaway Messages
 
-* **commits** are project states
+* **commits** are records of your project
 * **branches** are alternate timelines
+* **merges** & **pull requests** combine work across branches
 * **GitHub** is a cloud platform for backups and collaboration
 
 ---
 # Thanks
 
-* Check out the [Getting Started checklist](https://ha0ye.github.io/github-practices-BME6938/checklist.html) for actions to get started.
-* Check out the [Resources](https://ha0ye.github.io/github-practices-BME6938/resources.html) page for tutorials and guides
-* Contact me if you have questions or would like a (free) consultation on reproducibility / sharing of your data science project.
-* https://guides.uflib.ufl.edu/reproducibility has more info and my contact info
+* Don't forget to install the [Git software](https://git-scm.com/downloads) if you want to use Git on your computer.
+* I recommend the [GitHub Desktop](https://desktop.github.com/) software if you want a graphical client.
+* ["Understanding the GitHub flow"](https://guides.github.com/introduction/flow/) has more details on the GitHub Flow system
