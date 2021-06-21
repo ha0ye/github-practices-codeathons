@@ -379,7 +379,7 @@ We will now test out the **GitHub Flow** system on your project repos:
 * **commits** are records of your project
 * **branches** are alternate timelines
 * **merges** & **pull requests** combine work across branches
-* **GitHub** is a cloud platform for backups and collaboration
+* the **GitHub Flow** system lets you collaborate as a team
 
 ---
 # Thanks
