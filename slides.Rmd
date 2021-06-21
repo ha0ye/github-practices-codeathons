@@ -226,7 +226,6 @@ Git stores all of the information about commits, history, etc. the `.git` folder
 
 GitHub acts as a **remote** in the cloud.
 
-To use:
 1. Create an empty GitHub repo to be your remote location
 2. Synchronize this GitHub repo to your computer
 3. `push` will send all new commits on the current branch to GitHub
