@@ -123,7 +123,7 @@ You can:
 * default interface is the command line
   - commands have unintuitive names
   - error messages can be obscure
-* many other tools improve on the exoerience
+* many other tools improve on the experience
   - graphical interface
   - integration with other things, including GitHub
 
