@@ -57,16 +57,16 @@ How do you effectively work together??
 
 --
 
-* Can you edit someone else's changes?
-* Can multiple people update the codebase at the same time?
-* How do you save everyone's work, just in case?
-* How do external folks contribute to the project?
+* Can you edit files from someone else?
+* Can multiple people update the project at the same time?
+* How do you backup everyone's work?
+* How do people outside of the project make contributions?
 
 ---
 # What is in this talk?
 
-1 hour is only enough time to go over basic concepts and workflow practices.
-  - enough to get started (even if you haven't used git or github before)
+We have enough time to go over **basic** concepts and workflow practices.
+  - you can get started (even if you haven't used git or github before)
 
 We will conclude with a quick hands-on exercise using the GitHub website.
 
@@ -97,14 +97,14 @@ class: inverse, center, middle
 
 ---
 
-# Why Learn Git & GitHub
+# Why Learn Git?
 
-Git & GitHub are version control for **projects**.
+Git is version control for **projects**.
 
 You can:
-* restore project states involving changes to multiple files.
-* track *who* made *what* changes and *why*
-* handle changes in any file format
+* restore whole project states (i.e. multiple files at once)
+* keep track of *who* made *what* changes and *why*
+* handle changes in any type of file
 * manage work from large distributed teams
 
 ---
@@ -119,7 +119,7 @@ You can:
 
 # Git
 
-* **Git** is the name of the software and the associated version control system
+* **Git** is the software and the version control system
 * default interface is the command line
   - commands have unintuitive names
   - error messages can be obscure
@@ -148,9 +148,10 @@ class: inverse, center, middle
 ---
 # Basic Mechanics
 
-* Versioning occurs on the level of a projects:
-  - A project folder is a **repository** or **repo**, for short.
-* Changes are recorded by taking a snapshot of the folder:
+* Versioning occurs on the level of a project:
+  - projects are called a **repository** (or **repo**)
+  - a project is a folder and all of its contents (including subfolders)
+* Changes are recorded by taking a snapshot:
   - each snapshot is called a **commit**.
 
 ---
@@ -179,14 +180,15 @@ knitr::include_graphics("commits_example.png")
 
 # Constructing a Commit
 
-* each commit is created *manually*
-  - `add` files with changes (including new files)
+* recording commits is done *manually*
+  - what files have changes to record?  
+    `add` files with changes (including new files)
   - run `commit` command  
     write the commit message
 
 --
 * Why so tedious?
-  - You have full control over the changes that are recorded in each commit
+  - You have control over which changes are recorded in each commit
 
 ---
 
@@ -241,10 +243,10 @@ class: inverse, center, middle
 
 # About Branches
 
-For simple projects, your commits may proceed in a linear fashion:
+For simple projects, your commits may follow a line:
   - each commit is a step forward
 
-But you might want to work on different aspects of your project at the same time!
+But you might want to work on different parts of your project at the same time!
 
 --
 
@@ -307,7 +309,7 @@ knitr::include_graphics("merge-conflict.png")
 ---
 # Pull Requests
 
-On Github, merges start by creating a **pull request**.
+On Github, start by creating a **pull request**.
 
 --
 
@@ -339,10 +341,6 @@ On GitHub, you can add other accounts as collaborators to give them write access
 
 If you try to work in the same branch, you have to wait for the other person to finish making changes before you can make changes!
 
---
-
-We don't have time for this!
-
 ---
 
 # GitHub Flow for Collaborations
@@ -356,7 +354,7 @@ We don't have time for this!
 
 # Benefits
 
-* multiple lines of work can happen at the same time, in **different branches**
+* work in different areas of the project can happen at the same time, in **different branches**
 * subteams can work together on shared branches
   - pull request from separate branches to a shared group branch
   - discussions can happen in the pull request
