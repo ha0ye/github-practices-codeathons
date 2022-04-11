@@ -53,7 +53,7 @@ class: inverse, center, middle
 
 --
 
-How do you effectively work together??
+How do you work together effectively??
 
 --
 
@@ -65,12 +65,10 @@ How do you effectively work together??
 ---
 # What is in this talk?
 
-We have enough time to go over **basic** concepts and workflow practices.
+We will go over **basic** concepts and workflow practices.
   - you can get started (even if you haven't used git or github before)
 
-We will conclude with a quick hands-on exercise using the GitHub website.
-
-(If teams do not yet have a shared repo that every team member has access to, **please speak up now**!)
+We will conclude with a short hands-on exercise using the GitHub website.
 
 ---
 This lesson teaches you to:
@@ -92,8 +90,8 @@ class: inverse, center, middle
 --
 ## You are probably already using version control!
 
-* MS Word has "track changes"
-* Dropbox / Google Drive can revert versions
+* MS Word will let you "track changes"
+* Dropbox / Google Drive store some past versions
 
 ---
 
@@ -181,10 +179,10 @@ knitr::include_graphics("commits_example.png")
 # Constructing a Commit
 
 * recording commits is done *manually*
-  - what files have changes to record?  
+  - what files have changed since the last commit? 
     `add` files with changes (including new files)
-  - run `commit` command  
-    write the commit message
+  - use `commit` command  
+  - write the commit message
 
 --
 * Why so tedious?
@@ -200,7 +198,7 @@ knitr::include_graphics("commits_example.png")
 
 --
 
-*In Git, files and folders are temporary; nothing is saved and safe unless it is in a **commit**.*
+*When working in git, think of files and folders as temporary; changes are not saved unless added to a **commit**.*
 
 ---
 class: inverse, center, middle
@@ -218,18 +216,19 @@ file backup = store a copy somewhere else
 Git stores all of the information about commits, history, etc. the `.git` folder of your project
 * `.git` is normally hidden
 
-* You can copy over the project folder, and it will contain the full git history. (e.g. You can store it in Dropbox.)
+* If you copy the project folder, it will also contain the full git history. (i.e. you can back up separately if you want)
 
-* You can also specify other locations to synchronize a git repository to.  
+* You can specify other locations to synchronize a git repository to.  
   These are called **remotes**.
   
 ---
-# GitHub
+# GitHub is a cloud **remote**
 
-GitHub acts as a **remote** in the cloud.
-
+Setup:
 1. Create an empty GitHub repo to be your remote location
 2. Synchronize this GitHub repo to your computer
+
+Synchronize:
 3. `push` will send all new commits on the current branch to GitHub
 4. `pull` will retrieve new commits from GitHub
 
@@ -243,10 +242,9 @@ class: inverse, center, middle
 
 # About Branches
 
-For simple projects, your commits may follow a line:
-  - each commit is a step forward
+For simple projects, your project may progress as a line from beginning to end.
 
-But you might want to work on different parts of your project at the same time!
+If you are solving a new problem, you may want to experiment as you go.
 
 --
 
@@ -339,7 +337,7 @@ On GitHub, you can add other accounts as collaborators to give them write access
 
 --
 
-If you try to work in the same branch, you have to wait for the other person to finish making changes before you can make changes!
+If you work in the same branch, you have to wait for the other person to finish making changes before you can add yours!
 
 ---
 
@@ -357,7 +355,7 @@ If you try to work in the same branch, you have to wait for the other person to 
 * work in different areas of the project can happen at the same time, in **different branches**
 * subteams can work together on shared branches
   - pull request from separate branches to a shared group branch
-  - discussions can happen in the pull request
+  - Github enables discussions of pull requests
 
 ---
 
