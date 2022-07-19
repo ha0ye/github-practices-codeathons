@@ -1,6 +1,6 @@
 Package: github.practices.codeathons
 Title: Using Github for Collaborative Codeathons
-Version: 1.1.2
+Version: 1.1.3
 Authors@R: 
     person(given = "Hao",
            family = "Ye",
@@ -32,3 +32,4 @@ learningOutcomes: * articulate the differences between `git` and `Github`
  * create and merge pull requests
  * use the "Github Flow" system
 priorCourse: 
+X-schema.org-keywords: Open Educational Resources, Research Support Skills, Version Control, Workshop, Git, Github, Data Science

@@ -25,18 +25,35 @@ lesson_keywords <- c("Open Educational Resources",
                      "Git", 
                      "Github", 
                      "Data Science")
+lesson_version <- "1.1.3"
+
 folder_name <- basename(usethis::proj_get())
 package_name <- gsub("-", ".", folder_name)
+github_url <- sub("^git@github\\.com:", "https://github.com/", 
+                  sub("\\.git$", "", usethis::git_remotes()$origin)
+)
 
 desc::desc_set(Package = package_name, 
                Title = lesson_title, 
-               Description = lesson_description)
+               Description = lesson_description, 
+               Version = lesson_version, 
+               URL = github_url, 
+               Version = lesson_version, 
+               "X-schema.org-keywords" = paste(lesson_keywords, collapse = ", "))
 
-zenodo_json <- jsonlite::read_json(".zenodo.json")
-zenodo_json$title <- lesson_title
-zenodo_json$description <- lesson_description
-zenodo_json$keywords <- as.list(lesson_keywords)
-jsonlite::write_json(zenodo_json, ".zenodo.json", 
+cite_data <- list(
+    title = lesson_title, 
+    version = lesson_version, 
+    creators = list(list(affiliation = "University of Florida", 
+                 name = "Hao Ye", 
+                 orcid = "0000-0002-8630-1458")), 
+    description = lesson_description, 
+    keywords = as.list(lesson_keywords), 
+    license = desc::desc_get("License"), 
+    upload_type = "lesson"
+)
+
+jsonlite::write_json(cite_data, ".zenodo.json", 
                      auto_unbox = TRUE, pretty = TRUE)
 ```
 
